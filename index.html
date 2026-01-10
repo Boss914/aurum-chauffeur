@@ -1,20 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aurum Chauffeur | VIP Chauffeur Service</title>
-  <meta name="description" content="Luxury VIP Chauffeur Service in Germany. Mercedes-AMG GLE 63. Discreet, punctual, premium." />
+
+  <title>Leutkirch Chauffeur GmbH | VIP Chauffeur Service (Allgäu • München)</title>
+  <meta name="description" content="VIP Chauffeur Service in Leutkirch im Allgäu, Memmingen, München & ganz Deutschland. Mercedes-AMG GLE 63. Diskret, pünktlich, premium. Airport Transfers & Stundenbuchung." />
   <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://aurumchauffeur.de/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="geo.region" content="DE-BW" />
+  <meta name="geo.placename" content="Leutkirch im Allgäu" />
+
+  <meta property="og:title" content="Leutkirch Chauffeur GmbH | VIP Chauffeur Service" />
+  <meta property="og:description" content="VIP Chauffeur Service in Leutkirch im Allgäu, Allgäu & Germany-wide. Airport Transfers & Hourly booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aurumchauffeur.de/" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Leutkirch Chauffeur GmbH",
+    "description":"VIP Chauffeur Service in Leutkirch im Allgäu, Memmingen, München & Germany-wide. Airport transfers and hourly booking.",
+    "url":"https://aurumchauffeur.de/",
+    "telephone":"+49 152 36884712",
+    "email":"contact@aurumchauffeur.de",
+    "priceRange":"€€€",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Allgäuallee 15",
+      "postalCode":"88299",
+      "addressLocality":"Leutkirch im Allgäu",
+      "addressCountry":"DE"
+    },
+    "areaServed":[
+      {"@type":"City","name":"Leutkirch im Allgäu"},
+      {"@type":"AdministrativeArea","name":"Allgäu"},
+      {"@type":"City","name":"Memmingen"},
+      {"@type":"City","name":"München"},
+      {"@type":"City","name":"Stuttgart"}
+    ],
+    "sameAs":[
+      "https://wa.me/4915236884712"
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --bg:#0b0b0f;
-      --card:#12121a;
       --text:#f4f4f7;
       --muted:#b9b9c6;
       --gold:#c9a24a;
       --line:rgba(255,255,255,.10);
       --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --shadow2: 0 18px 44px rgba(0,0,0,.32);
       --radius:22px;
       --max:1120px;
     }
@@ -24,20 +68,23 @@
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(201,162,74,.18), transparent 55%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,.06), transparent 50%),
-                  var(--bg);
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(201,162,74,.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,.06), transparent 50%),
+        var(--bg);
       letter-spacing:.2px;
     }
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+
+    /* NAV */
     .nav{
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-      position:sticky;top:0;z-index:20;
-      background:rgba(11,11,15,.75);
+      position:sticky;top:0;z-index:40;
+      background:rgba(11,11,15,.78);
       backdrop-filter: blur(12px);
       border-bottom:1px solid var(--line);
     }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
     .badge{
       width:38px;height:38px;border-radius:14px;
@@ -57,7 +104,15 @@
       background: rgba(201,162,74,.10);
       color:var(--text);
       font-size:13px;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
+    .pill:hover{
+      transform: translateY(-1px);
+      border-color: rgba(201,162,74,.55);
+      box-shadow: 0 0 0 6px rgba(201,162,74,.12);
+    }
+
+    /* Language switch */
     .lang{
       display:flex;gap:8px;align-items:center;
       border:1px solid var(--line);
@@ -74,6 +129,18 @@
       border:1px solid rgba(201,162,74,.28);
     }
 
+    /* GOLD HOVER */
+    .gold-hover{
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      will-change: transform;
+    }
+    .gold-hover:hover{
+      transform: translateY(-2px);
+      border-color: rgba(201,162,74,.55) !important;
+      box-shadow: 0 0 0 6px rgba(201,162,74,.10), var(--shadow2);
+    }
+
+    /* HERO */
     .hero{
       margin-top:18px;
       border-radius: var(--radius);
@@ -95,7 +162,7 @@
     .hero-inner{
       position:relative;
       padding:64px 26px;
-      max-width: 760px;
+      max-width: 820px;
     }
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
@@ -116,7 +183,7 @@
       font-size:48px;line-height:1.05;
       letter-spacing:.4px;
     }
-    .hero p{margin:0;color:var(--muted);font-size:16px;line-height:1.6;max-width:56ch}
+    .hero p{margin:0;color:var(--muted);font-size:16px;line-height:1.6;max-width:62ch}
     .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -126,12 +193,18 @@
       color:var(--text);
       font-weight:600;
       font-size:14px;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      cursor:pointer;
     }
     .btn.primary{
       border:1px solid rgba(201,162,74,.40);
       background: linear-gradient(135deg, rgba(201,162,74,.22), rgba(255,255,255,.06));
     }
-    .btn:hover{transform: translateY(-1px)}
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(201,162,74,.55);
+      box-shadow: 0 0 0 6px rgba(201,162,74,.10);
+    }
     .meta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
     .chip{
       font-size:12px;color:var(--muted);
@@ -140,6 +213,7 @@
       border:1px solid var(--line);
     }
 
+    /* GRID + CARD */
     .grid{
       display:grid;
       grid-template-columns: repeat(12, 1fr);
@@ -151,13 +225,11 @@
       border:1px solid var(--line);
       border-radius: var(--radius);
       padding:18px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.25);
     }
     .card h3{margin:0 0 8px;font-size:16px;letter-spacing:.6px}
     .card p{margin:0;color:var(--muted);line-height:1.65}
     .span6{grid-column: span 6;}
     .span4{grid-column: span 4;}
-    .span8{grid-column: span 8;}
     .span12{grid-column: span 12;}
 
     .list{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:10px}
@@ -171,16 +243,108 @@
       flex:0 0 auto;
     }
 
-    .carbox{
+    /* Photos */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .photo{
+      position:relative;
       border-radius: var(--radius);
       overflow:hidden;
-      min-height: 320px;
-      background:
-        linear-gradient(180deg, rgba(11,11,15,.15), rgba(11,11,15,.85)),
-        url("interior.jpg") center/cover no-repeat;
+      min-height:320px;
       border:1px solid var(--line);
+      box-shadow: 0 12px 40px rgba(0,0,0,.25);
     }
+    .photo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(11,11,15,.10), rgba(11,11,15,.86));
+      pointer-events:none;
+      z-index:1;
+    }
+    .photo span{
+      position:absolute;
+      left:18px;
+      bottom:16px;
+      z-index:2;
+      font-size:13px;
+      letter-spacing:.6px;
+      color:var(--muted);
+    }
+    .photo img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      z-index:0;
+      transition: transform .35s ease;
+    }
+    .photo:hover img{ transform: scale(1.05); }
 
+    /* Pricing */
+    .price{
+      font-size:30px;
+      letter-spacing:.3px;
+      color: var(--text);
+      margin:8px 0 8px;
+    }
+    .price b{color:var(--gold)}
+    .small{font-size:12px;color:var(--muted);line-height:1.6}
+
+    /* Booking form */
+    .field{display:grid;gap:6px;margin-top:10px}
+    label{font-size:12px;color:var(--muted);letter-spacing:.5px}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(201,162,74,.55);
+      box-shadow: 0 0 0 6px rgba(201,162,74,.10);
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+    .form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+
+    /* Map / Reviews (privacy) */
+    .map-shell{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      overflow:hidden;
+      background: rgba(255,255,255,.02);
+      min-height: 340px;
+      position:relative;
+    }
+    .map-consent{
+      position:absolute;inset:0;
+      display:grid;place-items:center;
+      padding:18px;
+      text-align:center;
+      background:
+        radial-gradient(900px 400px at 30% 30%, rgba(201,162,74,.14), transparent 55%),
+        rgba(11,11,15,.90);
+    }
+    .map-consent p{color:var(--muted);max-width:56ch;margin:10px auto 0}
+    .map-iframe{width:100%;height:360px;border:0;display:block}
+
+    /* Footer */
     .footer{
       margin:22px 0 40px;
       color:var(--muted);
@@ -190,18 +354,55 @@
       padding-top:16px;
     }
 
+    /* WhatsApp floating */
+    .wa-float{
+      position:fixed;
+      right:18px; bottom:18px;
+      z-index:80;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(201,162,74,.38);
+      background: linear-gradient(135deg, rgba(201,162,74,.22), rgba(255,255,255,.06));
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      display:inline-flex;align-items:center;gap:10px;
+      font-weight:700;font-size:13px;
+    }
+    .wa-float:hover{transform: translateY(-1px)}
+
+    details{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.02);
+      padding:14px 16px;
+    }
+    details summary{
+      cursor:pointer;
+      font-weight:700;
+      letter-spacing:.4px;
+      color:var(--text);
+    }
+    details .legal{
+      margin-top:10px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:13px;
+    }
+    .legal h4{margin:16px 0 8px;color:var(--text);font-size:13px}
+
     @media (max-width: 860px){
       .hero{min-height:520px}
       .hero h2{font-size:38px}
-      .span6,.span4,.span8{grid-column: span 12;}
+      .span6,.span4{grid-column: span 12;}
       .links{display:none}
+      .photo{min-height:260px}
+      .map-iframe{height:320px}
     }
   </style>
 </head>
 
 <body>
   <div class="nav">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <div class="wrap nav-inner">
       <div class="brand">
         <div class="badge" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -210,205 +411,625 @@
           </svg>
         </div>
         <div>
-          <h1>Aurum Chauffeur</h1>
-          <span>VIP Chauffeur Service • Germany</span>
+          <h1>Leutkirch Chauffeur GmbH</h1>
+          <span data-i18n="nav_tagline">VIP Chauffeur Service • Leutkirch im Allgäu • Germany</span>
         </div>
+      </div>
+
+      <div class="links" aria-label="Navigation">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#pricing" data-i18n="nav_prices">Preise</a>
+        <a href="#booking" data-i18n="nav_booking">Booking</a>
+        <a href="#map" data-i18n="nav_map">Map</a>
+        <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+        <a href="#legal" data-i18n="nav_legal">Impressum</a>
       </div>
 
       <div style="display:flex;align-items:center;gap:12px;">
         <div class="lang" role="group" aria-label="Language switch">
-          <button id="btnEN" class="active" type="button">EN</button>
-          <button id="btnDE" type="button">DE</button>
+          <button id="btnDE" class="active" type="button">DE</button>
+          <button id="btnEN" type="button">EN</button>
         </div>
-        <a class="pill" href="#contact">Book</a>
+        <a class="pill" href="#booking" data-i18n="nav_book">Book</a>
       </div>
     </div>
   </div>
 
   <main class="wrap">
-    <section class="hero" id="top">
+    <section class="hero" id="top" aria-label="Hero">
       <div class="hero-inner">
-        <div class="kicker"><i></i> <span data-i18n="hero_kicker">Mercedes-AMG GLE 63 • Premium Private Driver</span></div>
+        <div class="kicker"><i></i> <span data-i18n="hero_kicker">Mercedes-AMG GLE 63 • Premium Chauffeur</span></div>
         <h2 data-i18n="hero_title">Luxury VIP Chauffeur Service</h2>
         <p data-i18n="hero_text">
-          Discreet, punctual, and premium. Airport transfers, business trips, VIP events —
-          in Allgäu, München, Stuttgart and across Germany.
+          Diskret, pünktlich, premium. Flughafentransfers, Business-Fahrten, VIP-Events —
+          im Allgäu, München, Stuttgart und deutschlandweit auf Anfrage.
         </p>
 
         <div class="cta">
-          <a class="btn primary" href="#contact" data-i18n="cta_primary">Request a ride</a>
-          <a class="btn" href="#services" data-i18n="cta_secondary">See services</a>
+          <a class="btn primary" href="#booking" data-i18n="cta_primary">Booking anfragen</a>
+          <a class="btn" href="#pricing" data-i18n="cta_prices">Preise ansehen</a>
+          <a class="btn" href="https://wa.me/4915236884712" target="_blank" rel="noopener" data-i18n="cta_whatsapp">WhatsApp direkt</a>
         </div>
 
         <div class="meta">
-          <span class="chip" data-i18n="chip_1">24/7 on request</span>
-          <span class="chip" data-i18n="chip_2">English • Deutsch • Română</span>
-          <span class="chip" data-i18n="chip_3">Business & Private Clients</span>
+          <span class="chip" data-i18n="chip_1">24/7 auf Anfrage</span>
+          <span class="chip" data-i18n="chip_2">Deutsch • English • Română</span>
+          <span class="chip" data-i18n="chip_3">Business & Privat</span>
         </div>
       </div>
     </section>
 
     <section class="grid" id="services">
-      <div class="card span6">
+      <div class="card span6 gold-hover">
         <h3 data-i18n="s1_title">Services</h3>
         <ul class="list">
           <li><span class="tick">✓</span> <span data-i18n="s1_a">Airport transfers (MUC / STR / FMM)</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_b">Business & executive rides</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_c">VIP events & private trips</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_d">Cross-city long distance (DE/EU)</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_b">Hourly VIP Chauffeur (by request)</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_c">Business & private rides</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_d">Long distance (DE/EU) on request</span></li>
         </ul>
       </div>
 
-      <div class="card span6">
-        <h3 data-i18n="s2_title">Why Aurum</h3>
+      <div class="card span6 gold-hover">
+        <h3 data-i18n="s2_title">Why us</h3>
         <ul class="list">
-          <li><span class="tick">✓</span> <span data-i18n="s2_a">Discretion & professional appearance</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s2_b">Punctuality — your time matters</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_a">Discreet & professional appearance</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_b">Punctual — your time matters</span></li>
           <li><span class="tick">✓</span> <span data-i18n="s2_c">Clean vehicle, premium experience</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s2_d">Transparent pricing on request</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_d">Transparent pricing</span></li>
         </ul>
       </div>
 
-      <div class="card span8">
+      <div class="card span12 gold-hover">
         <h3 data-i18n="car_title">Vehicle</h3>
         <p data-i18n="car_text">
           Mercedes-AMG GLE 63 — luxury SUV with powerful performance and executive comfort.
-          Perfect for business travelers and VIP clients.
         </p>
-        <div class="grid" style="margin-top:12px">
-          <div class="card span6" style="margin:0">
-            <h3 data-i18n="car_f1_t">Comfort</h3>
-            <p data-i18n="car_f1_p">Climate control, premium seating, quiet ride.</p>
+
+        <div class="gallery">
+          <div class="photo span6 gold-hover">
+            <img src="amg.jpg" alt="Mercedes-AMG GLE 63 • Exterior">
+            <span data-i18n="car_ext">Mercedes-AMG GLE 63 • Exterior</span>
           </div>
-          <div class="card span6" style="margin:0">
-            <h3 data-i18n="car_f2_t">Privacy</h3>
-            <p data-i18n="car_f2_p">Discreet service and a calm, professional environment.</p>
+          <div class="photo span6 gold-hover">
+            <img src="amg1.jpg" alt="Mercedes-AMG GLE 63 • Interior">
+            <span data-i18n="car_int">Luxury Interior • Executive Comfort</span>
           </div>
         </div>
       </div>
 
-      <div class="carbox span4" aria-label="Interior photo block"></div>
-
-      <div class="card span12" id="areas">
+      <div class="card span12 gold-hover">
         <h3 data-i18n="area_title">Service area</h3>
-        <p data-i18n="area_text">Allgäu • Memmingen • Kempten • München • Stuttgart • Germany-wide on request</p>
+        <p data-i18n="area_text">Leutkirch im Allgäu • Memmingen • Kempten • München • Stuttgart • Germany-wide on request</p>
+      </div>
+    </section>
+
+    <section class="grid" id="pricing">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="price_title">Pricing</h3>
+        <p class="small" data-i18n="price_note">
+          Indicative prices — depends on route, time, traffic and waiting time. Fast confirmation via WhatsApp/E-mail.
+        </p>
       </div>
 
-      <div class="card span12" id="contact">
-        <h3 data-i18n="contact_title">Contact / Booking</h3>
-        <p data-i18n="contact_text">
-          Send your date, pickup location, destination, and number of passengers. We reply fast.
-        </p>
+      <div class="card span4 gold-hover">
+        <h3 data-i18n="p1_title">Hourly booking</h3>
+        <div class="price"><b>€90</b> <span data-i18n="per_hour">/ hour</span></div>
+        <div class="small" data-i18n="p1_note">Minimum booking: 2 hours</div>
+      </div>
 
-        <div class="grid" style="margin-top:12px">
-          <div class="card span4" style="margin:0">
-            <h3>WhatsApp</h3>
-            <p>+49 152 36884712</p>
+      <div class="card span4 gold-hover">
+        <h3 data-i18n="p2_title">Airport → Airport</h3>
+        <div class="price" data-i18n="p2_price">from <b>€180</b></div>
+        <div class="small" data-i18n="p2_note">e.g. MUC ⇄ FMM / STR • on request</div>
+      </div>
+
+      <div class="card span4 gold-hover">
+        <h3 data-i18n="p3_title">Airport → City</h3>
+        <div class="price" data-i18n="p3_price">from <b>€120</b></div>
+        <div class="small" data-i18n="p3_note">Direct transfer • no hidden fees</div>
+      </div>
+    </section>
+
+    <section class="grid" id="booking">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="booking_title">Booking / Request</h3>
+        <p data-i18n="booking_text">Fill the form → send directly via WhatsApp or Email.</p>
+
+        <form id="bookingForm" novalidate>
+          <div class="form-grid">
+            <div class="field span6">
+              <label for="name" data-i18n="f_name">Name *</label>
+              <input id="name" type="text" placeholder="Name" required />
+            </div>
+            <div class="field span6">
+              <label for="contact" data-i18n="f_contact">Contact (phone/email) *</label>
+              <input id="contact" type="text" placeholder="+49… or email@…" required />
+            </div>
+
+            <div class="field span4">
+              <label for="date" data-i18n="f_date">Date *</label>
+              <input id="date" type="date" required />
+            </div>
+            <div class="field span4">
+              <label for="time" data-i18n="f_time">Time *</label>
+              <input id="time" type="time" required />
+            </div>
+            <div class="field span4">
+              <label for="pax" data-i18n="f_pax">Passengers *</label>
+              <select id="pax" required>
+                <option value="" data-i18n="f_choose">Please choose</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+              </select>
+            </div>
+
+            <div class="field span6">
+              <label for="pickup" data-i18n="f_pickup">Pickup *</label>
+              <input id="pickup" type="text" placeholder="e.g. Munich Airport (MUC), Terminal 2" required />
+            </div>
+            <div class="field span6">
+              <label for="destination" data-i18n="f_dest">Destination *</label>
+              <input id="destination" type="text" placeholder="e.g. Hotel / Address / City" required />
+            </div>
+
+            <div class="field span12">
+              <label for="service" data-i18n="f_service">Service</label>
+              <select id="service">
+                <option>Airport Transfer</option>
+                <option>Hourly VIP Chauffeur</option>
+                <option>Business Ride</option>
+                <option>Event / VIP</option>
+                <option>Long Distance (DE/EU)</option>
+              </select>
+            </div>
+
+            <div class="field span12">
+              <label for="message" data-i18n="f_msg">Message (optional)</label>
+              <textarea id="message" placeholder="Waiting time, luggage, child seat, multiple stops etc."></textarea>
+              <div class="small" data-i18n="f_hint">No backend needed: send opens WhatsApp or Email.</div>
+            </div>
           </div>
-          <div class="card span4" style="margin:0">
-            <h3>Email</h3>
-            <p>contact@aurumchauffeur.de</p>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit" data-i18n="send_wa">Send via WhatsApp</button>
+            <button class="btn" type="button" id="sendEmailBtn" data-i18n="send_email">Send via Email</button>
           </div>
-          <div class="card span4" style="margin:0">
-            <h3 data-i18n="contact_hours_t">Availability</h3>
-            <p data-i18n="contact_hours_p">24/7 on request</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="grid" id="map">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="map_title">Google Maps (Leutkirch im Allgäu)</h3>
+        <p class="small" data-i18n="map_note">Privacy: Google Maps loads external content. Click “Load map”.</p>
+
+        <div class="map-shell" id="mapShell">
+          <div class="map-consent" id="mapConsent">
+            <div>
+              <div class="kicker" style="justify-content:center"><i></i><span data-i18n="map_disabled">Map disabled</span></div>
+              <p data-i18n="map_consent">By loading the map you accept data transfer to Google.</p>
+              <div style="margin-top:14px">
+                <button class="btn primary" type="button" id="loadMapBtn" data-i18n="map_load">Load map</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="cta" style="margin-top:14px">
-          <a class="btn primary" href="https://wa.me/4915236884712" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn" href="mailto:contact@aurumchauffeur.de?subject=Booking%20Request%20-%20Aurum%20Chauffeur">Email</a>
+        <div style="margin-top:10px" class="small">
+          <a id="gmbLink" target="_blank" rel="noopener" class="pill gold-hover" href="#">
+            <span data-i18n="gmb_btn">Open on Google / Reviews</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <section class="grid" id="reviews">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="reviews_title">Google Reviews</h3>
+        <p class="small" data-i18n="reviews_note">
+          Official Google does not provide a free “reviews list embed” without API key or a widget provider.
+          Recommended: use the Google link above + your Google Business Profile.
+        </p>
+
+        <div class="grid" style="margin-top:10px">
+          <div class="card span4 gold-hover">
+            <h3 data-i18n="rev_tip1_t">Tip 1</h3>
+            <p data-i18n="rev_tip1_p">Create/verify Google Business Profile for “Leutkirch Chauffeur GmbH”.</p>
+          </div>
+          <div class="card span4 gold-hover">
+            <h3 data-i18n="rev_tip2_t">Tip 2</h3>
+            <p data-i18n="rev_tip2_p">Add services, areas (Allgäu/MUC), phone and website for local SEO.</p>
+          </div>
+          <div class="card span4 gold-hover">
+            <h3 data-i18n="rev_tip3_t">Tip 3</h3>
+            <p data-i18n="rev_tip3_p">Ask clients for reviews and share the review link after each ride.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="legal">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="legal_title">Impressum & Privacy (DSGVO)</h3>
+
+        <div class="grid" style="margin-top:12px">
+          <div class="span6">
+            <details class="gold-hover">
+              <summary data-i18n="imp_title">Impressum</summary>
+              <div class="legal" data-i18n="imp_body">
+                <h4>Angaben gemäß § 5 TMG</h4>
+                <p>
+                  <b>Leutkirch Chauffeur GmbH</b><br/>
+                  Allgäuallee 15<br/>
+                  88299 Leutkirch im Allgäu<br/>
+                  Deutschland
+                </p>
+
+                <h4>Vertreten durch</h4>
+                <p>Geschäftsführer: <b>(Name eintragen)</b></p>
+
+                <h4>Kontakt</h4>
+                <p>
+                  Telefon: +49 152 36884712<br/>
+                  E-Mail: contact@aurumchauffeur.de
+                </p>
+
+                <h4>Registereintrag</h4>
+                <p>Handelsregister: <b>(HRB eintragen)</b><br/>Registergericht: <b>(Registergericht eintragen)</b></p>
+
+                <h4>Umsatzsteuer</h4>
+                <p>USt-IdNr. gemäß §27a UStG: <b>(falls vorhanden)</b></p>
+
+                <h4>Streitschlichtung</h4>
+                <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                <h4>Haftung</h4>
+                <p>Für Inhalte externer Links übernehmen wir keine Gewähr. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="span6">
+            <details class="gold-hover">
+              <summary data-i18n="privacy_title">Datenschutzerklärung / Privacy Policy</summary>
+              <div class="legal" data-i18n="privacy_body">
+                <h4>1. Verantwortlicher</h4>
+                <p>Leutkirch Chauffeur GmbH, Allgäuallee 15, 88299 Leutkirch im Allgäu.<br/>E-Mail: contact@aurumchauffeur.de</p>
+
+                <h4>2. Zugriffsdaten / Server-Logs</h4>
+                <p>Beim Besuch werden technische Daten verarbeitet (z.B. IP-Adresse, Zeitpunkt, User-Agent), um die Website auszuliefern und Sicherheit zu gewährleisten.</p>
+
+                <h4>3. Kontaktaufnahme (WhatsApp/E-Mail)</h4>
+                <p>Wenn Sie Kontakt aufnehmen, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) und/oder Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+                <h4>4. Google Maps (Einwilligung)</h4>
+                <p>Google Maps wird erst nach Klick auf „Karte laden“ aktiviert. Dabei können Daten an Google übermittelt werden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
+
+                <h4>5. Rechte</h4>
+                <p>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch sowie Beschwerde bei einer Aufsichtsbehörde.</p>
+
+                <h4>6. Speicherdauer</h4>
+                <p>Daten werden nur so lange gespeichert, wie es für die Anfrage erforderlich ist oder gesetzliche Pflichten bestehen.</p>
+
+                <h4>7. Cookies</h4>
+                <p>Keine Tracking-Cookies (Vorlage). Falls Analytics/Pixel genutzt werden, muss das ergänzt werden.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <div class="footer">
-      <div>© <span id="year"></span> Aurum Chauffeur • VIP Chauffeur Service</div>
-      <div><a href="#top">Back to top</a> • <a href="#">Impressum</a> • <a href="#">Datenschutz</a></div>
+      <div>© <span id="year"></span> Leutkirch Chauffeur GmbH • VIP Chauffeur Service</div>
+      <div><a href="#top" data-i18n="back_top">Back to top</a> • <a href="#legal" data-i18n="foot_legal">Impressum</a> • <a href="#legal" data-i18n="foot_privacy">Privacy</a></div>
     </div>
   </main>
 
+  <a class="wa-float gold-hover" href="https://wa.me/4915236884712" target="_blank" rel="noopener" aria-label="WhatsApp chat">
+    💬 WhatsApp
+  </a>
+
   <script>
+    // ===== i18n =====
     const dict = {
-      EN: {
-        hero_kicker: "Mercedes-AMG GLE 63 • Premium Private Driver",
-        hero_title: "Luxury VIP Chauffeur Service",
-        hero_text: "Discreet, punctual, and premium. Airport transfers, business trips, VIP events — in Allgäu, München, Stuttgart and across Germany.",
-        cta_primary: "Request a ride",
-        cta_secondary: "See services",
-        chip_1: "24/7 on request",
-        chip_2: "English • Deutsch • Română",
-        chip_3: "Business & Private Clients",
-        s1_title: "Services",
-        s1_a: "Airport transfers (MUC / STR / FMM)",
-        s1_b: "Business & executive rides",
-        s1_c: "VIP events & private trips",
-        s1_d: "Cross-city long distance (DE/EU)",
-        s2_title: "Why Aurum",
-        s2_a: "Discretion & professional appearance",
-        s2_b: "Punctuality — your time matters",
-        s2_c: "Clean vehicle, premium experience",
-        s2_d: "Transparent pricing on request",
-        car_title: "Vehicle",
-        car_text: "Mercedes-AMG GLE 63 — luxury SUV with powerful performance and executive comfort. Perfect for business travelers and VIP clients.",
-        car_f1_t: "Comfort",
-        car_f1_p: "Climate control, premium seating, quiet ride.",
-        car_f2_t: "Privacy",
-        car_f2_p: "Discreet service and a calm, professional environment.",
-        area_title: "Service area",
-        area_text: "Allgäu • Memmingen • Kempten • München • Stuttgart • Germany-wide on request",
-        contact_title: "Contact / Booking",
-        contact_text: "Send your date, pickup location, destination, and number of passengers. We reply fast.",
-        contact_hours_t: "Availability",
-        contact_hours_p: "24/7 on request"
-      },
       DE: {
+        nav_tagline: "VIP Chauffeur Service • Leutkirch im Allgäu • Deutschland",
+        nav_services: "Services",
+        nav_prices: "Preise",
+        nav_booking: "Booking",
+        nav_map: "Map",
+        nav_reviews: "Bewertungen",
+        nav_legal: "Impressum",
+        nav_book: "Book",
+
         hero_kicker: "Mercedes-AMG GLE 63 • Premium Chauffeur",
         hero_title: "Luxury VIP Chauffeur Service",
-        hero_text: "Diskret, pünktlich und premium. Flughafentransfers, Business-Fahrten, VIP-Events — im Allgäu, München, Stuttgart und ganz Deutschland.",
-        cta_primary: "Fahrt anfragen",
-        cta_secondary: "Leistungen ansehen",
+        hero_text: "Diskret, pünktlich, premium. Flughafentransfers, Business-Fahrten, VIP-Events — im Allgäu, München, Stuttgart und deutschlandweit auf Anfrage.",
+
+        cta_primary: "Booking anfragen",
+        cta_prices: "Preise ansehen",
+        cta_whatsapp: "WhatsApp direkt",
+
         chip_1: "24/7 auf Anfrage",
-        chip_2: "English • Deutsch • Română",
-        chip_3: "Business- & Privatkunden",
-        s1_title: "Leistungen",
-        s1_a: "Flughafentransfer (MUC / STR / FMM)",
-        s1_b: "Business & Executive Fahrten",
-        s1_c: "VIP-Events & private Fahrten",
+        chip_2: "Deutsch • English • Română",
+        chip_3: "Business & Privat",
+
+        s1_title: "Services",
+        s1_a: "Airport transfers (MUC / STR / FMM)",
+        s1_b: "Stundenbuchung (VIP Chauffeur)",
+        s1_c: "Business- & Privatfahrten",
         s1_d: "Langstrecke (DE/EU) auf Anfrage",
-        s2_title: "Warum Aurum",
+
+        s2_title: "Warum wir",
         s2_a: "Diskretion & professionelles Auftreten",
         s2_b: "Pünktlichkeit — Ihre Zeit zählt",
         s2_c: "Sauberes Fahrzeug, Premium-Erlebnis",
-        s2_d: "Transparente Preise auf Anfrage",
+        s2_d: "Transparente Preise",
+
         car_title: "Fahrzeug",
-        car_text: "Mercedes-AMG GLE 63 — Luxus-SUV mit Leistung und Executive-Komfort. Ideal für Business-Reisende und VIP-Kunden.",
-        car_f1_t: "Komfort",
-        car_f1_p: "Klimatisierung, Premium-Sitze, ruhige Fahrt.",
-        car_f2_t: "Privatsphäre",
-        car_f2_p: "Diskreter Service und entspannte Atmosphäre.",
+        car_text: "Mercedes-AMG GLE 63 — Luxus-SUV mit Leistung und Executive-Komfort.",
+        car_ext: "Mercedes-AMG GLE 63 • Exterior",
+        car_int: "Luxury Interior • Executive Comfort",
+
         area_title: "Einsatzgebiet",
-        area_text: "Allgäu • Memmingen • Kempten • München • Stuttgart • deutschlandweit auf Anfrage",
-        contact_title: "Kontakt / Buchung",
-        contact_text: "Senden Sie Datum, Abholort, Ziel und Anzahl der Personen. Wir antworten schnell.",
-        contact_hours_t: "Verfügbarkeit",
-        contact_hours_p: "24/7 auf Anfrage"
+        area_text: "Leutkirch im Allgäu • Memmingen • Kempten • München • Stuttgart • deutschlandweit auf Anfrage",
+
+        price_title: "Preise",
+        price_note: "Richtwerte – abhängig von Strecke, Zeit, Traffic und Wartezeit. Bestätigung schnell per WhatsApp/E-Mail.",
+        p1_title: "Stundenbuchung",
+        per_hour: "/ Stunde",
+        p1_note: "Mindestbuchung: 2 Stunden",
+        p2_title: "Airport → Airport",
+        p2_price: "ab <b>€180</b>",
+        p2_note: "z.B. MUC ⇄ FMM / STR • auf Anfrage",
+        p3_title: "Airport → Stadt",
+        p3_price: "ab <b>€120</b>",
+        p3_note: "Direkter Transfer • keine versteckten Kosten",
+
+        booking_title: "Booking / Anfrage",
+        booking_text: "Formular ausfüllen → direkt per WhatsApp oder E-Mail senden.",
+        f_name: "Name *",
+        f_contact: "Kontakt (Telefon/E-Mail) *",
+        f_date: "Datum *",
+        f_time: "Uhrzeit *",
+        f_pax: "Personen *",
+        f_choose: "Bitte wählen",
+        f_pickup: "Abholort *",
+        f_dest: "Ziel *",
+        f_service: "Service",
+        f_msg: "Nachricht (optional)",
+        f_hint: "Kein Backend nötig: Senden öffnet WhatsApp oder E-Mail.",
+        send_wa: "Via WhatsApp senden",
+        send_email: "Via E-Mail senden",
+
+        map_title: "Google Maps (Leutkirch im Allgäu)",
+        map_note: "Datenschutz: Google Maps lädt externe Inhalte. Bitte „Karte laden“ klicken.",
+        map_disabled: "Karte deaktiviert",
+        map_consent: "Mit dem Laden der Karte akzeptieren Sie, dass Daten an Google übertragen werden.",
+        map_load: "Karte laden",
+        gmb_btn: "Auf Google öffnen / Bewertungen",
+
+        reviews_title: "Google Bewertungen",
+        reviews_note: "Ohne API-Key/Widget ist ein offizielles „Bewertungen als Liste“-Embed nicht verfügbar. Empfehlung: Google-Link + Google Business Profile nutzen.",
+        rev_tip1_t: "Tipp 1",
+        rev_tip1_p: "Google Business Profile für „Leutkirch Chauffeur GmbH“ erstellen/verifizieren.",
+        rev_tip2_t: "Tipp 2",
+        rev_tip2_p: "Services, Einsatzgebiet (Allgäu/MUC), Telefon & Website eintragen (lokales SEO).",
+        rev_tip3_t: "Tipp 3",
+        rev_tip3_p: "Nach jeder Fahrt um eine Bewertung bitten und den Review-Link senden.",
+
+        legal_title: "Impressum & Datenschutz (DSGVO)",
+        imp_title: "Impressum",
+        privacy_title: "Datenschutzerklärung / Privacy Policy",
+
+        back_top: "Back to top",
+        foot_legal: "Impressum",
+        foot_privacy: "Datenschutz"
+      },
+
+      EN: {
+        nav_tagline: "VIP Chauffeur Service • Leutkirch im Allgäu • Germany",
+        nav_services: "Services",
+        nav_prices: "Pricing",
+        nav_booking: "Booking",
+        nav_map: "Map",
+        nav_reviews: "Reviews",
+        nav_legal: "Legal",
+        nav_book: "Book",
+
+        hero_kicker: "Mercedes-AMG GLE 63 • Premium Chauffeur",
+        hero_title: "Luxury VIP Chauffeur Service",
+        hero_text: "Discreet, punctual, premium. Airport transfers, business rides, VIP events — in Allgäu, Munich, Stuttgart and across Germany on request.",
+
+        cta_primary: "Request booking",
+        cta_prices: "See pricing",
+        cta_whatsapp: "WhatsApp now",
+
+        chip_1: "24/7 on request",
+        chip_2: "Deutsch • English • Română",
+        chip_3: "Business & Private",
+
+        s1_title: "Services",
+        s1_a: "Airport transfers (MUC / STR / FMM)",
+        s1_b: "Hourly VIP Chauffeur",
+        s1_c: "Business & private rides",
+        s1_d: "Long distance (DE/EU) on request",
+
+        s2_title: "Why us",
+        s2_a: "Discreet and professional appearance",
+        s2_b: "Punctual — your time matters",
+        s2_c: "Clean vehicle, premium experience",
+        s2_d: "Transparent pricing",
+
+        car_title: "Vehicle",
+        car_text: "Mercedes-AMG GLE 63 — luxury SUV with performance and executive comfort.",
+        car_ext: "Mercedes-AMG GLE 63 • Exterior",
+        car_int: "Luxury Interior • Executive Comfort",
+
+        area_title: "Service area",
+        area_text: "Leutkirch im Allgäu • Memmingen • Kempten • Munich • Stuttgart • Germany-wide on request",
+
+        price_title: "Pricing",
+        price_note: "Indicative prices — depends on route, time, traffic and waiting time. Fast confirmation via WhatsApp/E-mail.",
+        p1_title: "Hourly booking",
+        per_hour: "/ hour",
+        p1_note: "Minimum booking: 2 hours",
+        p2_title: "Airport → Airport",
+        p2_price: "from <b>€180</b>",
+        p2_note: "e.g. MUC ⇄ FMM / STR • on request",
+        p3_title: "Airport → City",
+        p3_price: "from <b>€120</b>",
+        p3_note: "Direct transfer • no hidden fees",
+
+        booking_title: "Booking / Request",
+        booking_text: "Fill the form → send directly via WhatsApp or Email.",
+        f_name: "Name *",
+        f_contact: "Contact (phone/email) *",
+        f_date: "Date *",
+        f_time: "Time *",
+        f_pax: "Passengers *",
+        f_choose: "Please choose",
+        f_pickup: "Pickup *",
+        f_dest: "Destination *",
+        f_service: "Service",
+        f_msg: "Message (optional)",
+        f_hint: "No backend needed: send opens WhatsApp or Email.",
+        send_wa: "Send via WhatsApp",
+        send_email: "Send via Email",
+
+        map_title: "Google Maps (Leutkirch im Allgäu)",
+        map_note: "Privacy: Google Maps loads external content. Click “Load map”.",
+        map_disabled: "Map disabled",
+        map_consent: "By loading the map you accept data transfer to Google.",
+        map_load: "Load map",
+        gmb_btn: "Open on Google / Reviews",
+
+        reviews_title: "Google Reviews",
+        reviews_note: "Official Google does not provide a free “reviews list embed” without API key or a widget provider. Recommended: use the Google link + Google Business Profile.",
+        rev_tip1_t: "Tip 1",
+        rev_tip1_p: "Create/verify Google Business Profile for “Leutkirch Chauffeur GmbH”.",
+        rev_tip2_t: "Tip 2",
+        rev_tip2_p: "Add services, areas (Allgäu/MUC), phone and website for local SEO.",
+        rev_tip3_t: "Tip 3",
+        rev_tip3_p: "Ask clients for reviews and share the review link after each ride.",
+
+        legal_title: "Legal Notice & Privacy",
+        imp_title: "Legal notice (Impressum)",
+        privacy_title: "Privacy Policy (GDPR)",
+
+        back_top: "Back to top",
+        foot_legal: "Legal",
+        foot_privacy: "Privacy"
       }
     };
 
+    // ===== Helpers =====
     function setLang(lang){
+      document.documentElement.lang = (lang === "DE") ? "de" : "en";
       document.querySelectorAll("[data-i18n]").forEach(el=>{
         const key = el.getAttribute("data-i18n");
-        if(dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
+        const val = dict[lang] && dict[lang][key];
+        if(!val) return;
+        // Allow HTML for price fields with <b>
+        if(key.startsWith("p2_price") || key.startsWith("p3_price") || key.startsWith("p2_price") || key.startsWith("p3_price") || key === "p2_price" || key === "p3_price"){
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
       });
-      document.getElementById("btnEN").classList.toggle("active", lang==="EN");
       document.getElementById("btnDE").classList.toggle("active", lang==="DE");
+      document.getElementById("btnEN").classList.toggle("active", lang==="EN");
+      localStorage.setItem("lang", lang);
     }
 
-    document.getElementById("btnEN").addEventListener("click", ()=>setLang("EN"));
     document.getElementById("btnDE").addEventListener("click", ()=>setLang("DE"));
+    document.getElementById("btnEN").addEventListener("click", ()=>setLang("EN"));
 
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ===== Booking (WhatsApp + Email) =====
+    function validateRequired(){
+      const required = ["name","contact","date","time","pax","pickup","destination"];
+      for(const id of required){
+        const el = document.getElementById(id);
+        if(!el.value.trim()){
+          el.focus();
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function buildMessage(){
+      const name = document.getElementById("name").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const pax = document.getElementById("pax").value;
+      const pickup = document.getElementById("pickup").value.trim();
+      const destination = document.getElementById("destination").value.trim();
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value.trim();
+
+      const lines = [
+        "Booking Request - Leutkirch Chauffeur GmbH",
+        "-----------------------------------------",
+        `Name: ${name}`,
+        `Contact: ${contact}`,
+        `Date/Time: ${date} ${time}`,
+        `Passengers: ${pax}`,
+        `Service: ${service}`,
+        `Pickup: ${pickup}`,
+        `Destination: ${destination}`,
+        message ? `Notes: ${message}` : ""
+      ].filter(Boolean);
+
+      return lines.join("\n");
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      if(!validateRequired()) return;
+
+      const text = encodeURIComponent(buildMessage());
+      const wa = `https://wa.me/4915236884712?text=${text}`;
+      window.open(wa, "_blank", "noopener");
+    });
+
+    document.getElementById("sendEmailBtn").addEventListener("click", function(){
+      if(!validateRequired()) return;
+
+      const subject = encodeURIComponent("Booking Request - Leutkirch Chauffeur GmbH");
+      const body = encodeURIComponent(buildMessage());
+      window.location.href = `mailto:contact@aurumchauffeur.de?subject=${subject}&body=${body}`;
+    });
+
+    // ===== Google Maps lazy load + GMB link =====
+    const MAP_QUERY = "Allgäuallee 15, 88299 Leutkirch im Allgäu, Germany";
+    const mapShell = document.getElementById("mapShell");
+    const mapConsent = document.getElementById("mapConsent");
+
+    // GMB / Reviews link (works without API)
+    const gmbUrl = "https://www.google.com/search?q=" + encodeURIComponent("Leutkirch Chauffeur GmbH Allgäuallee 15 88299 Leutkirch im Allgäu reviews");
+    document.getElementById("gmbLink").href = gmbUrl;
+
+    document.getElementById("loadMapBtn").addEventListener("click", () => {
+      const src = "https://www.google.com/maps?q=" + encodeURIComponent(MAP_QUERY) + "&output=embed";
+      const iframe = document.createElement("iframe");
+      iframe.className = "map-iframe";
+      iframe.setAttribute("loading","lazy");
+      iframe.setAttribute("referrerpolicy","no-referrer-when-downgrade");
+      iframe.src = src;
+
+      mapConsent.remove();
+      mapShell.appendChild(iframe);
+    });
+
+    // ===== Init language =====
+    const saved = localStorage.getItem("lang");
+    setLang(saved === "EN" ? "EN" : "DE");
   </script>
 </body>
 </html>
