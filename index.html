@@ -8,6 +8,12 @@
   <meta name="description" content="VIP Chauffeur Service in Leutkirch im Allgäu, Memmingen, München & ganz Deutschland. Mercedes-AMG GLE 63. Diskret, pünktlich, premium. Airport Transfers & Stundenbuchung." />
   <meta name="theme-color" content="#0b0b0f" />
 
+  <!-- ✅ Favicon (logo mic sus în tab / Google) -->
+  <!-- Pune fișierul favicon.png (32x32) în același folder cu acest HTML -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
   <!-- SEO -->
   <link rel="canonical" href="https://aurumchauffeur.de/" />
   <meta name="robots" content="index,follow" />
@@ -298,6 +304,47 @@
     .price b{color:var(--gold)}
     .small{font-size:12px;color:var(--muted);line-height:1.6}
 
+    /* ✅ Contact card */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    .contact-item{
+      grid-column: span 4;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background: rgba(255,255,255,.02);
+      padding:14px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .icon{
+      width:38px;height:38px;border-radius:14px;
+      display:grid;place-items:center;
+      border:1px solid rgba(201,162,74,.30);
+      background: rgba(201,162,74,.10);
+      color:var(--gold);
+      flex:0 0 auto;
+    }
+    .contact-item b{display:block;font-size:13px;letter-spacing:.5px}
+    .contact-item a, .contact-item span{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+      word-break: break-word;
+    }
+    .contact-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
     /* Booking form */
     .field{display:grid;gap:6px;margin-top:10px}
     label{font-size:12px;color:var(--muted);letter-spacing:.5px}
@@ -353,6 +400,9 @@
       border-top:1px solid var(--line);
       padding-top:16px;
     }
+    .foot-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .foot-links a{color:var(--muted)}
+    .foot-links a:hover{color:var(--text)}
 
     /* WhatsApp floating */
     .wa-float{
@@ -396,6 +446,8 @@
       .links{display:none}
       .photo{min-height:260px}
       .map-iframe{height:320px}
+
+      .contact-item{grid-column: span 12;}
     }
   </style>
 </head>
@@ -419,6 +471,7 @@
       <div class="links" aria-label="Navigation">
         <a href="#services" data-i18n="nav_services">Services</a>
         <a href="#pricing" data-i18n="nav_prices">Preise</a>
+        <a href="#contact" data-i18n="nav_contact">Kontakt</a>
         <a href="#booking" data-i18n="nav_booking">Booking</a>
         <a href="#map" data-i18n="nav_map">Map</a>
         <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
@@ -464,27 +517,25 @@
         <h3 data-i18n="s1_title">Services</h3>
         <ul class="list">
           <li><span class="tick">✓</span> <span data-i18n="s1_a">Airport transfers (MUC / STR / FMM)</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_b">Hourly VIP Chauffeur (by request)</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_c">Business & private rides</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s1_d">Long distance (DE/EU) on request</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_b">Stundenbuchung (VIP Chauffeur)</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_c">Business- & Privatfahrten</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s1_d">Langstrecke (DE/EU) auf Anfrage</span></li>
         </ul>
       </div>
 
       <div class="card span6 gold-hover">
         <h3 data-i18n="s2_title">Why us</h3>
         <ul class="list">
-          <li><span class="tick">✓</span> <span data-i18n="s2_a">Discreet & professional appearance</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s2_b">Punctual — your time matters</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s2_c">Clean vehicle, premium experience</span></li>
-          <li><span class="tick">✓</span> <span data-i18n="s2_d">Transparent pricing</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_a">Diskretion & professionelles Auftreten</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_b">Pünktlichkeit — Ihre Zeit zählt</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_c">Sauberes Fahrzeug, Premium-Erlebnis</span></li>
+          <li><span class="tick">✓</span> <span data-i18n="s2_d">Transparente Preise</span></li>
         </ul>
       </div>
 
       <div class="card span12 gold-hover">
         <h3 data-i18n="car_title">Vehicle</h3>
-        <p data-i18n="car_text">
-          Mercedes-AMG GLE 63 — luxury SUV with powerful performance and executive comfort.
-        </p>
+        <p data-i18n="car_text">Mercedes-AMG GLE 63 — luxury SUV with powerful performance and executive comfort.</p>
 
         <div class="gallery">
           <div class="photo span6 gold-hover">
@@ -501,6 +552,47 @@
       <div class="card span12 gold-hover">
         <h3 data-i18n="area_title">Service area</h3>
         <p data-i18n="area_text">Leutkirch im Allgäu • Memmingen • Kempten • München • Stuttgart • Germany-wide on request</p>
+      </div>
+    </section>
+
+    <!-- ✅ NEW: Contact Card (Email / Telefon / Locație) -->
+    <section class="grid" id="contact">
+      <div class="card span12 gold-hover">
+        <h3 data-i18n="contact_title">Kontakt</h3>
+        <p class="small" data-i18n="contact_note">Schnelle Antwort per WhatsApp, Telefon oder E-Mail.</p>
+
+        <div class="contact-grid">
+          <div class="contact-item gold-hover">
+            <div class="icon" aria-hidden="true">✉️</div>
+            <div>
+              <b data-i18n="contact_email_label">E-Mail</b>
+              <a href="mailto:aurum63@aurumchauffeur.de">aurum63@aurumchauffeur.de</a>
+            </div>
+          </div>
+
+          <div class="contact-item gold-hover">
+            <div class="icon" aria-hidden="true">📞</div>
+            <div>
+              <b data-i18n="contact_phone_label">Telefon</b>
+              <a href="tel:+4915236884712">+49 152 36884712</a>
+            </div>
+          </div>
+
+          <div class="contact-item gold-hover">
+            <div class="icon" aria-hidden="true">📍</div>
+            <div>
+              <b data-i18n="contact_loc_label">Standort</b>
+              <span>Allgäuallee 15, 88299 Leutkirch im Allgäu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn primary" href="https://wa.me/4915236884712" target="_blank" rel="noopener" data-i18n="contact_btn_whatsapp">WhatsApp</a>
+          <a class="btn" href="tel:+4915236884712" data-i18n="contact_btn_call">Anrufen</a>
+          <a class="btn" href="mailto:aurum63@aurumchauffeur.de" data-i18n="contact_btn_email">E-Mail senden</a>
+          <a class="btn" id="openMapsBtn" href="#" target="_blank" rel="noopener" data-i18n="contact_btn_maps">Maps öffnen</a>
+        </div>
       </div>
     </section>
 
@@ -656,7 +748,7 @@
           <div class="span6">
             <details class="gold-hover">
               <summary data-i18n="imp_title">Impressum</summary>
-              <div class="legal" data-i18n="imp_body">
+              <div class="legal">
                 <h4>Angaben gemäß § 5 TMG</h4>
                 <p>
                   <b>Leutkirch Chauffeur GmbH</b><br/>
@@ -670,8 +762,8 @@
 
                 <h4>Kontakt</h4>
                 <p>
-                  Telefon: +49 152 36884712<br/>
-                  E-Mail: aurum63@aurumchauffeur.de
+                  Telefon: <a href="tel:+4915236884712">+49 152 36884712</a><br/>
+                  E-Mail: <a href="mailto:aurum63@aurumchauffeur.de">aurum63@aurumchauffeur.de</a>
                 </p>
 
                 <h4>Registereintrag</h4>
@@ -692,9 +784,11 @@
           <div class="span6">
             <details class="gold-hover">
               <summary data-i18n="privacy_title">Datenschutzerklärung / Privacy Policy</summary>
-              <div class="legal" data-i18n="privacy_body">
+              <div class="legal">
                 <h4>1. Verantwortlicher</h4>
-                <p>Leutkirch Chauffeur GmbH, Allgäuallee 15, 88299 Leutkirch im Allgäu.<br/>E-Mail: aurum63@aurumchauffeur.de</p>
+                <p>Leutkirch Chauffeur GmbH, Allgäuallee 15, 88299 Leutkirch im Allgäu.<br/>
+                  E-Mail: <a href="mailto:aurum63@aurumchauffeur.de">aurum63@aurumchauffeur.de</a>
+                </p>
 
                 <h4>2. Zugriffsdaten / Server-Logs</h4>
                 <p>Beim Besuch werden technische Daten verarbeitet (z.B. IP-Adresse, Zeitpunkt, User-Agent), um die Website auszuliefern und Sicherheit zu gewährleisten.</p>
@@ -717,13 +811,18 @@
             </details>
           </div>
         </div>
-
       </div>
     </section>
 
     <div class="footer">
       <div>© <span id="year"></span> Leutkirch Chauffeur GmbH • VIP Chauffeur Service</div>
-      <div><a href="#top" data-i18n="back_top">Back to top</a> • <a href="#legal" data-i18n="foot_legal">Impressum</a> • <a href="#legal" data-i18n="foot_privacy">Privacy</a></div>
+      <div class="foot-links">
+        <a href="#top" data-i18n="back_top">Back to top</a>
+        • <a href="#legal" data-i18n="foot_legal">Impressum</a>
+        • <a href="#legal" data-i18n="foot_privacy">Privacy</a>
+        • <a href="mailto:aurum63@aurumchauffeur.de">aurum63@aurumchauffeur.de</a>
+        • <a href="tel:+4915236884712">+49 152 36884712</a>
+      </div>
     </div>
   </main>
 
@@ -738,6 +837,7 @@
         nav_tagline: "VIP Chauffeur Service • Leutkirch im Allgäu • Deutschland",
         nav_services: "Services",
         nav_prices: "Preise",
+        nav_contact: "Kontakt",
         nav_booking: "Booking",
         nav_map: "Map",
         nav_reviews: "Bewertungen",
@@ -775,6 +875,16 @@
 
         area_title: "Einsatzgebiet",
         area_text: "Leutkirch im Allgäu • Memmingen • Kempten • München • Stuttgart • deutschlandweit auf Anfrage",
+
+        contact_title: "Kontakt",
+        contact_note: "Schnelle Antwort per WhatsApp, Telefon oder E-Mail.",
+        contact_email_label: "E-Mail",
+        contact_phone_label: "Telefon",
+        contact_loc_label: "Standort",
+        contact_btn_whatsapp: "WhatsApp",
+        contact_btn_call: "Anrufen",
+        contact_btn_email: "E-Mail senden",
+        contact_btn_maps: "Maps öffnen",
 
         price_title: "Preise",
         price_note: "Richtwerte – abhängig von Strecke, Zeit, Traffic und Wartezeit. Bestätigung schnell per WhatsApp/E-Mail.",
@@ -833,6 +943,7 @@
         nav_tagline: "VIP Chauffeur Service • Leutkirch im Allgäu • Germany",
         nav_services: "Services",
         nav_prices: "Pricing",
+        nav_contact: "Contact",
         nav_booking: "Booking",
         nav_map: "Map",
         nav_reviews: "Reviews",
@@ -870,6 +981,16 @@
 
         area_title: "Service area",
         area_text: "Leutkirch im Allgäu • Memmingen • Kempten • Munich • Stuttgart • Germany-wide on request",
+
+        contact_title: "Contact",
+        contact_note: "Fast response via WhatsApp, phone or email.",
+        contact_email_label: "Email",
+        contact_phone_label: "Phone",
+        contact_loc_label: "Location",
+        contact_btn_whatsapp: "WhatsApp",
+        contact_btn_call: "Call",
+        contact_btn_email: "Send email",
+        contact_btn_maps: "Open maps",
 
         price_title: "Pricing",
         price_note: "Indicative prices — depends on route, time, traffic and waiting time. Fast confirmation via WhatsApp/E-mail.",
@@ -932,7 +1053,6 @@
         const key = el.getAttribute("data-i18n");
         const val = dict[lang] && dict[lang][key];
         if(!val) return;
-        // Allow HTML for price fields with <b>
         if(key === "p2_price" || key === "p3_price"){
           el.innerHTML = val;
         } else {
@@ -946,7 +1066,6 @@
 
     document.getElementById("btnDE").addEventListener("click", ()=>setLang("DE"));
     document.getElementById("btnEN").addEventListener("click", ()=>setLang("EN"));
-
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // ===== Booking (WhatsApp + Email) =====
@@ -1006,14 +1125,17 @@
       window.location.href = `mailto:aurum63@aurumchauffeur.de?subject=${subject}&body=${body}`;
     });
 
-    // ===== Google Maps lazy load + GMB link =====
+    // ===== Google Maps lazy load + Links =====
     const MAP_QUERY = "Allgäuallee 15, 88299 Leutkirch im Allgäu, Germany";
     const mapShell = document.getElementById("mapShell");
     const mapConsent = document.getElementById("mapConsent");
 
-    // GMB / Reviews link (works without API)
     const gmbUrl = "https://www.google.com/search?q=" + encodeURIComponent("Leutkirch Chauffeur GmbH Allgäuallee 15 88299 Leutkirch im Allgäu reviews");
     document.getElementById("gmbLink").href = gmbUrl;
+
+    // Contact "Open maps"
+    const mapsUrl = "https://www.google.com/maps?q=" + encodeURIComponent(MAP_QUERY);
+    document.getElementById("openMapsBtn").href = mapsUrl;
 
     document.getElementById("loadMapBtn").addEventListener("click", () => {
       const src = "https://www.google.com/maps?q=" + encodeURIComponent(MAP_QUERY) + "&output=embed";
@@ -1033,4 +1155,3 @@
   </script>
 </body>
 </html>
-
