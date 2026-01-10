@@ -28,7 +28,7 @@
     "description":"VIP Chauffeur Service in Leutkirch im Allgäu, Memmingen, München & Germany-wide. Airport transfers and hourly booking.",
     "url":"https://aurumchauffeur.de/",
     "telephone":"+49 152 36884712",
-    "email":"contact@aurumchauffeur.de",
+    "email":"aurum63@aurumchauffeur.de",
     "priceRange":"€€€",
     "address":{
       "@type":"PostalAddress",
@@ -411,7 +411,7 @@
           </svg>
         </div>
         <div>
-          <h1>Aurum Chauffeur </h1>
+          <h1>Aurum Chauffeur</h1>
           <span data-i18n="nav_tagline">VIP Chauffeur Service • Memmingen / Leutkirch • Germany</span>
         </div>
       </div>
@@ -671,7 +671,7 @@
                 <h4>Kontakt</h4>
                 <p>
                   Telefon: +49 152 36884712<br/>
-                  E-Mail: contact@aurumchauffeur.de
+                  E-Mail: aurum63@aurumchauffeur.de
                 </p>
 
                 <h4>Registereintrag</h4>
@@ -694,7 +694,7 @@
               <summary data-i18n="privacy_title">Datenschutzerklärung / Privacy Policy</summary>
               <div class="legal" data-i18n="privacy_body">
                 <h4>1. Verantwortlicher</h4>
-                <p>Leutkirch Chauffeur GmbH, Allgäuallee 15, 88299 Leutkirch im Allgäu.<br/>E-Mail: contact@aurumchauffeur.de</p>
+                <p>Leutkirch Chauffeur GmbH, Allgäuallee 15, 88299 Leutkirch im Allgäu.<br/>E-Mail: aurum63@aurumchauffeur.de</p>
 
                 <h4>2. Zugriffsdaten / Server-Logs</h4>
                 <p>Beim Besuch werden technische Daten verarbeitet (z.B. IP-Adresse, Zeitpunkt, User-Agent), um die Website auszuliefern und Sicherheit zu gewährleisten.</p>
@@ -933,7 +933,7 @@
         const val = dict[lang] && dict[lang][key];
         if(!val) return;
         // Allow HTML for price fields with <b>
-        if(key.startsWith("p2_price") || key.startsWith("p3_price") || key.startsWith("p2_price") || key.startsWith("p3_price") || key === "p2_price" || key === "p3_price"){
+        if(key === "p2_price" || key === "p3_price"){
           el.innerHTML = val;
         } else {
           el.textContent = val;
@@ -954,7 +954,7 @@
       const required = ["name","contact","date","time","pax","pickup","destination"];
       for(const id of required){
         const el = document.getElementById(id);
-        if(!el.value.trim()){
+        if(!String(el.value || "").trim()){
           el.focus();
           return false;
         }
@@ -1003,7 +1003,7 @@
 
       const subject = encodeURIComponent("Booking Request - Leutkirch Chauffeur GmbH");
       const body = encodeURIComponent(buildMessage());
-      window.location.href = `mailto:contact@aurumchauffeur.de?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:aurum63@aurumchauffeur.de?subject=${subject}&body=${body}`;
     });
 
     // ===== Google Maps lazy load + GMB link =====
